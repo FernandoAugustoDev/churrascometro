@@ -1,0 +1,293 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    font-family: sans-serif;
+}
+header {
+    width: 100%;
+    height: 200px;
+    background-image: url('./assets/bbq.jpg');
+    background-size: cover;
+    background-position-y: bottom;
+    
+    color: white;
+    text-align: center;
+    padding: 80px;
+}
+
+main {
+    max-width: 1000px;
+    padding: 30px;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+h2{
+    color: red;
+}
+.mb {
+    margin-bottom: 30px;
+}
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+}
+.card {
+    max-width: 150px;
+    display: inline-block;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.card label {
+    display: block;
+    color: black;
+    font-size: 20px;
+    margin-bottom:5px ;
+}
+
+.card input{
+    width: 100%;
+    height: 50px;
+    font-size: 25px;
+    text-align: center;
+
+}
+/* Chrome, Safari, Edge, Opera  - remover as setas dos botão*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox remover as setas dos botã*/
+input[type=number] {
+    -moz-appearance: textfield;
+  }
+.timer {
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+ul {
+    list-style: none;
+    
+}
+.mb li{
+    text-align: left;
+    font-size: 16px; 
+    margin-top: 10px;
+    margin-left: 80px ;
+    display: flex;
+    align-items: center;
+    
+}
+li label {
+    margin-left: 5px;
+}
+input[type=checkbox]{
+    width: 20px;
+    height: 20px;
+}
+
+button{
+    width: 300px;
+    height: 40px;
+    margin: auto;
+
+    border: none;
+    background-color: red;
+    color: white;
+    font-size: 22px;
+
+    border-radius: 8px;
+}
+button:hover{
+    transition: 0.5s;
+    background-color: rgb(194, 11, 11);
+}
+
+.modal {
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+
+    
+}
+
+
+
+.modal-content {
+    width: 800px;
+    height: 660px;
+    margin: auto;
+    background: white;
+
+    border-radius: 8px;
+    padding: 30px;
+    margin-top: 2%;
+    
+
+}
+
+.modal-content h2 {
+    padding: 20px;
+    text-align: center;
+}
+.modal-content ul{
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+.modal-content h3{
+    padding: 5px 0;
+    color: red;
+    text-align: center;
+}
+.modal-content li{
+    margin: 0;
+    padding: 5px 5px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+}
+.modal-content span {
+    float: right;
+}
+.modal-content button{
+    margin-top: 15px;
+    font-weight: bold;
+    display: flow-root;
+}
+.btn-back {
+    margin-top: 15px;
+    background: white;
+    color: red;
+    border: 1px solid red;
+}
+.btn-back:hover{
+    background: red;
+    color: white;
+}
+
+
+footer{
+    width: 100%;
+    height: 50px;
+    padding: 20px;
+    background-color: red;
+
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    font-style: italic;
+}
+
+footer a{
+    
+    color: white;
+    text-decoration: none;
+}
+
+/* resposividade */ 
+
+@media screen and (max-width: 1280px){
+    .modal-content {
+        width: 700px;
+        height: 600px;
+        margin-top: 10px;
+        padding: 20px;
+    }
+    .modal-content h2{
+        padding: 15px;
+    }
+    .modal-content button {
+        height: 35px;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .modal-content {
+        width: 500px;
+        height: 590px;
+        margin-top: 2%;
+        padding: 20px;
+    }
+    .modal-content h2 {
+        font-size: 18px;
+        padding: 10px;
+    }
+    .modal-content h3 {
+        font-size: 16px;
+    } 
+    .modal-content button {
+        margin-top: 10px;
+        height: 40px;
+    
+    }
+    .modal-content li{
+        padding: 3px 3px;
+    }
+    li {
+        margin-left: 50px;
+    }
+}
+
+
+@media screen and (max-width: 425px){
+    header {
+        height: 100px;
+        padding: 35px;
+    }
+    .cards {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .card{
+        margin-top: 15px;
+    }
+    .modal-content {
+        width: 100vw;
+        height: 100vh;
+        padding: 20px;
+        margin-top: 0;
+    }
+    li {
+        margin-left: 10px;
+    }
+
+}
+
+
+@media screen and (max-width: 320px){
+    h1 {
+        font-size: 25px;
+    }
+    button {
+        width: 250px;
+    }
+    .modal-content {
+        width: 100vw;
+        height: 100vh;
+    }
+    .modal-content button {
+        width: 250px;
+    }
+    .modal-content li {
+        font-size: 16px;
+    }
+    .modal-content h2 {
+        padding: 5px;
+    }
+    .modal-content span {
+        font-size: 14px;
+    }
+}

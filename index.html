@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Churrascometro</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./assets/icon-meat.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1>CHURRASCÔMETRO</h1>
+    </header>
+    <main>
+        <p class="mb">Saber calcular a quantidade certa de ingredientes para fazer seu churrasco
+        é uma tarefa dificil. Por isso, esta ferramenta foi criada para ajudá-lo nas 
+        compras e deixar seu churrasco ainda mais gostoso</p>
+
+        <h2 class="mb">Quantas pessoas vão ao seu churrasco?</h2>
+        <div class="cards mb">
+            <div class="card">
+                <img src="./assets/man.png" alt="homem">
+                <label for="qtdHomem">Homens</label>
+                <input type="number" name="qtdHomem" id="qtdHomem" placeholder="0" >
+            </div>
+            <div class="card">
+                <img src="./assets/woman.png" alt="mulher">
+                <label for="qtdMulher">Mulheres</label>
+                <input type="number" name="qtdMulher" id="qtdMulher" placeholder="0" >
+            </div>
+            <div class="card">
+                <img src="./assets/kids.png" alt="criança">
+                <label for="qtdCrianca">Crianças</label>
+                <input type="number" name="qtdCrianca" id="qtdCrianca" placeholder="0">
+            </div>
+        </div>
+        <h2 class="mb">Qual é duraçao do seu churrasco?</h2>
+        <div class="card timer">
+            <img src="./assets/stopwatch.png" alt="duracaçao">
+            <label for="qtdtempo">Duraçao</label>
+            <input type="number" name="qtdtempo" id="qtdtempo" placeholder="0">
+        </div>
+        <h2 class="mb">Quais carnes serão servida?</h2>
+        <ul class="mb">
+            <li><input type="checkbox" name="carne" id="bovino" class="carne" value="Bovino"> <label for="bovino">Bovino</label></li>
+            <li><input type="checkbox" name="carne" id="porco" class="carne" value="Porco"> <label for="porco">Porco</label></li>
+            <li><input type="checkbox" name="carne" id="frango" class="carne" value="Frango"> <label for="frango">Frango</label></li>
+            <li><input type="checkbox" name="carne" id="linguica" class="carne" value="Linguiça"> <label for="linguica">Linguiça</label></li>
+        </ul>
+        <h2 class="mb">Quais bebidas deseja servidas?</h2>
+        <ul class="mb">
+            <li><input type="checkbox" name="cerveja" id="cerveja" class="bebidas" value="Cerveja"> <label for="cerveja">Cerveja</label></li>
+            <li><input type="checkbox" name="refrigerante" id="refrigerante" class="bebidas" value="Refrigerante"> <label for="refrigerante">Refrigerante</label></li>
+            <li><input type="checkbox" name="suco" id="suco" value="Suco" class="bebidas"> <label for="suco">Suco</label></li>
+            <li><input type="checkbox" name="agua" id="agua" value="Agua" class="bebidas"> <label for="agua">Agua</label></li>
+        </ul>
+        
+        <button onclick="calcular()">Calcular</button>
+
+        
+    </main>
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <h2>Resultado do seu Churrasco:</h3>
+            <p id="tdConvidados"></p>
+            <p id="tdTempo"></p>
+            <ul>
+                <h3>Carnes</h3>
+                <div id="resultadoCarne">
+                    
+                </div>
+                
+            </ul>
+
+            <ul>
+                <h3>Bebidas</h3>
+                <div id="resultadosBebidas">
+
+                </div>
+            </ul>
+            <button onclick="window.print()">Imprimir</button>
+            <button class="btn-back" onclick="back()">Voltar</button>
+        </div>
+        
+    </div>
+    <footer><a href="https://www.linkedin.com/in/fernando-augusto-a4ab42164/" target="_blank">Criado por Fernando Augusto</a></footer>
+    <script src="script.js"></script>
+</body>
+</html>
