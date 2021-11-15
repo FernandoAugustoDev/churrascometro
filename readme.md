@@ -16,7 +16,7 @@
 <br>
 
 
-<p>⏱ Saber calcular a quantidade certa de ingredientes para fazer seu churrasco é uma tarefa dificil. Por isso, esta ferramenta foi criada para ajudá-lo nas compras e deixar seu churrasco ainda mais gostoso</p>
+<p>Saber calcular a quantidade certa de ingredientes para fazer seu churrasco é uma tarefa dificil. Por isso, esta ferramenta foi criada para ajudá-lo nas compras e deixar seu churrasco ainda mais gostoso</p>
 
 <br>
 <hr>
